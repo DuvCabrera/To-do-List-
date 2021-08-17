@@ -16,7 +16,6 @@ class TaskListAdapter (private val clickListener: TaskClickItemListener , privat
             LayoutInflater.from(parent.context).inflate(R.layout.task_list_item, parent, false)
         )
     }
-    private val taskDelete = arrayListOf<TaskModel>()
 
     var listenerComplete: (TaskModel) -> Unit = {}
     var listenerDelete: (TaskModel) -> Unit = {}
