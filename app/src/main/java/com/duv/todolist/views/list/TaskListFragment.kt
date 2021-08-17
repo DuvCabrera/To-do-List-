@@ -58,7 +58,7 @@ class TodoListFragment : Fragment(), TaskListView, TaskClickItemListener {
 
         adapter.listenerDelete = {
             presenter.deleteTask(it.id!!)
-            presenter.updateTask(it)
+            presenter.getTaskList()
         }
     }
 
