@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/todoListFragment">
+
+    <fragment
+        android:id="@+id/todoListFragment"
+        android:name="com.duv.todolist.views.list.TodoListFragment"
+        android:label="TodoListFragment"
+        tools:layout="@layout/fragment_todo_list">
+
+        <action
+            android:id="@+id/action_TodoListFragment_to_NewTaskFragment"
+            app:destination="@+id/newTaskFragment"/>
+        <action
+            android:id="@+id/action_todoListFragment_to_DetailFragment"
+            app:destination="@+id/detailFragment"/>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/newTaskFragment"
+        android:name="com.duv.todolist.views.newtask.NewTaskFragment"
+        android:label="NewTaskFragment"
+        tools:layout="@layout/fragment_new_task">
+
+        <action
+            android:id="@+id/action_NewTaskFragment_to_todoListFragment"
+            app:destination="@+id/todoListFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.duv.todolist.views.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+
+        <action
+            android:id="@+id/action_detailFragment_to_todoListFragment"
+            app:destination="@+id/todoListFragment"/>
+
+    </fragment>
+</navigation>
